@@ -45,3 +45,19 @@ Keep it terse. Future-you will thank present-you for capturing the *why*, not ju
 **Decision:** Adapt Herk-2's grill-me skill for the student kit and ship matching Claude/Codex packages. Save every answer to brainstorms/, preserve resumable Q&A history, and update canonical context only with confirmed facts during requested context-building sessions.
 
 **Why:** Onboarding is an initial snapshot. Ongoing interviews capture changing priorities, decisions, and preferences while keeping tentative ideas distinct from current business facts.
+
+---
+
+## 2026-09-10 — TrueNAS mount repair + peer recovery runbook
+
+**Decision:** Fix broken TrueNAS SMB mounts and write a Hermes peer/Tailscale recovery runbook to reduce rebuild frequency.
+
+**Why:** User spends more time fixing the system than using it. Peer connections and Tailscale settings break repeatedly, causing downtime. The user's explicit diagnosis: "I spend more time fixing the system than using it." Two concrete fixes applied:
+1. Removed dangling GVFS symlink at `/mnt/public`, mounted `//truenas-scale/public` and `//truenas-scale/Home-Directories` via CIFS using `/root/.smbcredentials`, added persistent `/etc/fstab` entries with `nofail`.
+2. Created `references/hermes-peer-recovery.md` — a step-by-step runbook covering Tailscale down, API server down, peer registration lost, and best-practice rules to prevent breaks.
+
+**Evidence:** Both mounts verified working (`ls /mnt/public/` shows AIS-OS, Media Files, Scripts, ISOs; `ls /mnt/Home-Directories/` shows Backups, Desktop, Documents, etc.). Fstab entries confirmed via `cat /etc/fstab`.
+
+**Alternatives considered:** Automating the peer setup with a skill (rejected — user wants documentation and user education first, not more automation). Mounting via systemd automount (rejected — simpler to use fstab with nofail).
+
+**Owner:** Chuck Blackmon (runbook + mounts), promax Hermes (fstab persistence)

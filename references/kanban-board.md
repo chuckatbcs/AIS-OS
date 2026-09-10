@@ -89,5 +89,5 @@ curl -X PATCH http://127.0.0.1:3100/api/issues/CBV-195 \
 
 ---
 
-**Last checked:** 2026-09-08  
-**Status:** ✅ Connected — markdown kanban board wired to Paperclip API
+**Last checked:** 2026-09-10
+**Status:** ⚠️ Migrated to pcgamer Hermes — API no longer runs on promax. Kanban board markdown still works locally.

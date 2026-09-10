@@ -8,7 +8,7 @@ Registry of every system the AIOS can reach. Filled by `/onboard` from Q4-Q7 ans
 | 2 | Customer interactions | Email (cbventures.co@gmail.com) | himalaya CLI (IMAP/SMTP) | app password | 2026-09-08 |
 | 3 | Calendar | (not specified) | not yet connected | — | — |
 | 4 | Communication | Email, Teams, person-to-person | himalaya CLI (IMAP/SMTP) | app password | 2026-09-08 |
-|| 5 | Project / task tracking | AI chats, email, **kanban board (markdown)** | file-based kanban (markdown) + Paperclip API | 2026-09-08 |
+|| 5 | Project / task tracking | AI chats, email, **kanban board (markdown)** | file-based kanban (markdown) + Paperclip API (on pcgamer) | 2026-09-10 |
 | 6 | Meeting intelligence | None (async only) | not yet connected | — | — |
 | 7 | Knowledge / files | Obsidian, email | file-based (read/write vault at `~/Documents/Obsidian Vault/Workspaces/Chuck/`) | — | 2026-09-08 |
 

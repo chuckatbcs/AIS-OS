@@ -31,6 +31,15 @@ Read `references/3ms-framework.md` once. It's how Chuck thinks about AI work. Mi
 
 See `EXPANSIONS.md` for what to add as you grow.
 
+## When the network breaks
+
+Read `references/hermes-peer-recovery.md` first. It covers peer connections, Tailscale, and mount recovery before escalating to manual repair.
+
+## Projects
+
+- `projects/ai-video-pipeline/` — Active: cinematic AI video pipeline (ComfyUI + Wan 2.2), Phase 1 in progress
+
+
 ## Knowledge base
 
 Chuck Blackmon. Building multiple AI autonomous workflow businesses through Hermes, Codex, jAntigravity, Groqbot, etc. Sells to subscribers interested in newsletters or customers who want to pay for the service.
